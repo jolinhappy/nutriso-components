@@ -5,7 +5,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
-    "plugin:prettier/recommended"
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -15,7 +16,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    
+
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'prettier/prettier': 'error',
@@ -58,4 +59,4 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     noImplicitAny: 'off',
   },
-}
+};
