@@ -10,9 +10,11 @@ const meta: Meta<typeof Radio> = {
     },
     defaultValue: {
       control: 'text',
+      description: 'Can set default value.',
     },
     radioGroupList: {
       control: 'object',
+      description: 'Can set radio item list.',
     },
   },
   args: {

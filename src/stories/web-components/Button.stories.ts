@@ -8,14 +8,17 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     children: {
       control: 'text',
+      description: 'Can set Button text.',
     },
     size: {
       control: 'radio',
       options: ['default', 'sm', 'lg', 'icon'],
+      description: 'Can change Button size.',
     },
     variant: {
       control: 'radio',
       options: ['default', 'text', 'outline', 'error', 'link'],
+      description: 'Can change Button type.',
     },
   },
   args: {

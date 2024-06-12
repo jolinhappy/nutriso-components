@@ -7,6 +7,7 @@ const meta: Meta<typeof Checkbox> = {
   argTypes: {
     labelText: {
       control: 'text',
+      description: 'Set Checkbox label text.',
     },
     disabled: {
       control: 'boolean',

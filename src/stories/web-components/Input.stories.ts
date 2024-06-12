@@ -7,6 +7,8 @@ const meta: Meta<typeof Input> = {
   argTypes: {
     type: {
       control: 'radio',
+      options: ['text', 'password', 'number'],
+      description: 'Can change Input type.',
     },
     placeholder: {
       control: 'text',
@@ -16,6 +18,9 @@ const meta: Meta<typeof Input> = {
     },
     maxLength: {
       control: 'number',
+    },
+    value: {
+      control: 'text',
     },
   },
   args: {
