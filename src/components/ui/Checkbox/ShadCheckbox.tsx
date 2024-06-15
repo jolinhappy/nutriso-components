@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 
 import { cn } from 'SRC/lib/utils';
 
-const CnCheckbox = React.forwardRef<
+const ShadCheckbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -24,6 +24,6 @@ const CnCheckbox = React.forwardRef<
   </CheckboxPrimitive.Root>
 ));
 
-CnCheckbox.displayName = CheckboxPrimitive.Root.displayName;
+ShadCheckbox.displayName = CheckboxPrimitive.Root.displayName;
 
-export default CnCheckbox;
+export default ShadCheckbox;
