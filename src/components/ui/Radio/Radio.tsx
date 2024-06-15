@@ -1,5 +1,4 @@
 import { RadioGroup, RadioGroupItem } from 'SRC/components/ui/Radio/RadioGroup';
-import { cn } from 'SRC/lib/utils';
 
 interface IRadioItem {
   id: string;

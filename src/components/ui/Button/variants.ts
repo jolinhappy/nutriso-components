@@ -5,11 +5,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary-600 text-white hover:bg-primary-600/90',
-        error: 'bg-error-300 text-white hover:bg-primary-600/90',
-        text: 'text-primary-600 hover:bg-primary-100',
+        default: 'bg-primary-500 text-white hover:bg-primary-500/90',
+        error: 'bg-error-300 text-white hover:bg-primary-500/90',
+        text: 'text-primary-500 hover:bg-primary-100',
         outline:
-          '!border !border-primary-600 hover:bg-primary-600 text-primary-600 bg-white hover:bg-slate-100 hover:text-primary-600',
+          '!border !border-primary-500 hover:bg-primary-500 text-primary-500 bg-white hover:bg-slate-100 hover:text-primary-500',
         link: 'text-blue-400 underline-offset-4 hover:underline',
       },
       size: {
