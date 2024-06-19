@@ -27,4 +27,4 @@ const CheckboxWithLabel = ({
   );
 };
 
-export { CheckboxWithLabel };
+export { CheckboxWithLabel as Checkbox };

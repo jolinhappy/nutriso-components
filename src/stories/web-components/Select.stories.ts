@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Select from 'SRC/components/ui/Select';
+import { Select } from 'SRC/components/ui/Select';
 
 const meta: Meta<typeof Select> = {
   title: 'web-components/Select',
