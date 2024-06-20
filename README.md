@@ -1,8 +1,28 @@
 # Components for Nutriso Project
-- web components for Nutriso Project.
+- components for Nutriso Project.
 - Can use storybook to display components and confirm how to use.
 
-## The way of install and start
+## The way of install and use
+
+```
+npm i @pinkymini/nutriso-components-new
+```
+
+Add this setting content in ts.config.
+
+```
+"paths": {
+  "@pinkymini/nutriso-components-new": ["node_modules/@pinkymini/nutriso-components-new/dist/*"]
+},
+```
+
+import css in main.tsx.
+
+```
+import '@pinkymini/nutriso-components-new/dist/style.css';
+```
+
+## The way of run storybook
 
 ```
 npm install
