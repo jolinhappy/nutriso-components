@@ -37,4 +37,4 @@ const Radio = ({ className, defaultValue, radioGroupList }: IRadioProps) => {
   );
 };
 
-export { Radio };
+export { Radio, IRadioItem };

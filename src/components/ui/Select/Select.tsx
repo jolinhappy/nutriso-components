@@ -15,7 +15,7 @@ interface ISelectOptionItem {
 
 interface ISelectProps {
   className?: string;
-  placeHolder?: string;
+  placeholder?: string;
   selectOption: ISelectOptionItem[];
   value?: string;
   disabled?: boolean;
@@ -24,7 +24,7 @@ interface ISelectProps {
 
 const Select = ({
   className,
-  placeHolder,
+  placeholder,
   value,
   selectOption,
   disabled,
@@ -33,7 +33,7 @@ const Select = ({
   return (
     <ShadSelect value={value} disabled={disabled} onValueChange={onValueChange}>
       <SelectTrigger className={className}>
-        <SelectValue placeholder={placeHolder} />
+        <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
         {selectOption.map((option) => (
@@ -46,4 +46,4 @@ const Select = ({
   );
 };
 
-export { Select };
+export { Select, ISelectOptionItem };

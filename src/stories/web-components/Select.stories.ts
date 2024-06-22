@@ -5,7 +5,7 @@ const meta: Meta<typeof Select> = {
   title: 'web-components/Select',
   component: Select,
   argTypes: {
-    placeHolder: {
+    placeholder: {
       control: 'text',
     },
     selectOption: {
@@ -19,7 +19,7 @@ const meta: Meta<typeof Select> = {
     },
   },
   args: {
-    placeHolder: 'Select an option',
+    placeholder: 'Select an option',
     selectOption: [
       {
         id: '1',
