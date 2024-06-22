@@ -8,14 +8,6 @@
 npm i @pinkymini/nutriso-components-new
 ```
 
-Add this setting content in ts.config.
-
-```
-"paths": {
-  "@pinkymini/nutriso-components-new": ["node_modules/@pinkymini/nutriso-components-new/dist/*"]
-},
-```
-
 import css in main.tsx.
 
 ```
