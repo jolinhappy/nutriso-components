@@ -11,11 +11,21 @@ interface IRadioProps {
   className?: string;
   defaultValue?: string;
   radioGroupList?: IRadioItem[];
+  onValueChange?: (value: string) => void;
 }
 
-const Radio = ({ className, defaultValue, radioGroupList }: IRadioProps) => {
+const Radio = ({
+  className,
+  defaultValue,
+  radioGroupList,
+  onValueChange,
+}: IRadioProps) => {
   return (
-    <RadioGroup className={className} defaultValue={defaultValue}>
+    <RadioGroup
+      className={className}
+      defaultValue={defaultValue}
+      onValueChange={onValueChange}
+    >
       {radioGroupList &&
         radioGroupList.map((radioItem: IRadioItem) => (
           <div key={radioItem.id} className="flex items-center space-x-2">

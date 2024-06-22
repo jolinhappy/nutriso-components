@@ -16,6 +16,10 @@ const meta: Meta<typeof Radio> = {
       control: 'object',
       description: 'Can set radio item list.',
     },
+    onValueChange: {
+      control: 'object',
+      description: 'Can set onValueChange function.',
+    },
   },
   args: {
     radioGroupList: [
@@ -31,6 +35,9 @@ const meta: Meta<typeof Radio> = {
         labelText: 'Option 2',
       },
     ],
+    onValueChange: (value: string) => {
+      console.log('value changed', value);
+    },
   },
 };
 
