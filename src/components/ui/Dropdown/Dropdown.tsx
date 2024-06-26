@@ -40,4 +40,4 @@ const Dropdown = ({
   );
 };
 
-export { Dropdown };
+export { Dropdown, IDropdownItem };
