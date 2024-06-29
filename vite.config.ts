@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
@@ -16,6 +17,11 @@ export default defineConfig({
       },
     }),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    environmentMatchGlobs: [['**/*.test.tsx', 'jsdom']],
+  },
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
