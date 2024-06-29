@@ -1,12 +1,14 @@
-name: CI
+name: release package
 
 on:
   push:
     branches:
-      - main
+      - 'main'
+    tags:
+      - 'main'
   pull_request:
     branches:
-      - main
+      - 'main'
 
 jobs:
   deploy:
@@ -26,3 +28,12 @@ jobs:
 
     - name: Run tests
       run: npm run test
+
+    - name: Check for tag
+      id: check_tag
+      run: |
+        if [ -n "$(git describe --tags --exact-match 2>/dev/null)" ]; then
+          echo "TAGGED=true" >> $GITHUB_ENV
+        else
+          echo "TAGGED=false" >> $GITHUB_ENV
+        fi
