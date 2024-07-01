@@ -29,11 +29,9 @@ jobs:
     - name: Run tests
       run: npm run test
 
-    - name: Check for tag
-      id: check_tag
-      run: |
-        if [ -n "$(git describe --tags --exact-match 2>/dev/null)" ]; then
-          echo "TAGGED=true" >> $GITHUB_ENV
-        else
-          echo "TAGGED=false" >> $GITHUB_ENV
-        fi
+    - name: Extract tag name
+      id: extract_tag
+      run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+    - name: Display tag name
+      run: echo "The tag name is ${{ env.TAG_NAME }}"
