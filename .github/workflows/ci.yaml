@@ -50,12 +50,7 @@ jobs:
           echo "CHANGESET_TYPE=custom" >> $GITHUB_ENV
         fi
 
-    - name: console
+    - name: Display tag name
       if: env.TAG_NAME != ''
       run: 
         run: echo "The name is ${{ env.TAG_NAME }}"
-
-    - name: console
-      if: env.CHANGESET_TYPE  != ''
-      run: 
-        run: echo "The type is ${{ env.CHANGESET_TYPE }}"
