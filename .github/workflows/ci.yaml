@@ -37,19 +37,6 @@ jobs:
           echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
         fi
 
-    - name: get changeset type
-      id: determine_changeset
-      run: |
-        if [[ "${{ env.TAG_NAME }}" == patch-* ]]; then
-          echo "CHANGESET_TYPE=patch" >> $GITHUB_ENV
-        elif [[ "${{ env.TAG_NAME }}" == minor-* ]]; then
-          echo "CHANGESET_TYPE=minor" >> $GITHUB_ENV
-        elif [[ "${{ env.TAG_NAME }}" == major-* ]]; then
-          echo "CHANGESET_TYPE=major" >> $GITHUB_ENV
-        else
-          echo "CHANGESET_TYPE=custom" >> $GITHUB_ENV
-        fi
-
     - name: Display tag name
       if: env.TAG_NAME != ''
       run: 
