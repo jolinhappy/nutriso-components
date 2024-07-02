@@ -54,8 +54,3 @@ jobs:
       if: env.TAG_NAME != ''
       run: 
         run: echo "The type is ${{ env.CHANGESET_TYPE }} and ${{ env.TAG_NAME }} "
-
-    #  - name: Generate changeset
-    #   if: env.TAG_NAME != ''
-    #   run: |
-    #     echo "Generating changeset for tag ${{ env.TAG_NAME }}"
