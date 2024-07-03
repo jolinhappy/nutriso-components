@@ -62,5 +62,7 @@ jobs:
         npx changeset version --type ${{ env.CHANGESET_TYPE }}
         npx changeset add --branch main --summary ${{ env.COMMIT }}
         npx changeset publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     
