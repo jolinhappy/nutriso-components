@@ -59,8 +59,8 @@ jobs:
     - name: Create changeset, version packages, and publish!
       if: ${{ env.CHANGESET_TYPE != '' && env.TAG_NAME != '' }}
       run: |
-        npx changeset version --type ${{ env.CHANGESET_TYPE }}
         npx changeset add --branch main --summary ${{ env.COMMIT }}
+        npx changeset version --type ${{ env.CHANGESET_TYPE }}
         npx changeset publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
