@@ -56,12 +56,6 @@ jobs:
         COMMIT=$(git log -1 --pretty=format:"%s")
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
 
-    - name: Display tag name
-      run: echo "The tag name is ${{ env.TAG_NAME }}"
-
-    - name: Display changeset type
-      run: echo "The changeset type is ${{ env.CHANGESET_TYPE }}"
-
     - name: Create changeset, version packages, and publish
       if: ${{ env.CHANGESET_TYPE != '' && env.TAG_NAME != '' }}
       run: |
