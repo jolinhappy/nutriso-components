@@ -56,7 +56,7 @@ jobs:
         COMMIT=$(git log -1 --pretty=format:"%s")
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
 
-    - name: Create changeset, version packages, and publish
+    - name: Create changeset, version packages, and publish!
       if: ${{ env.CHANGESET_TYPE != '' && env.TAG_NAME != '' }}
       run: |
         npx changeset version --type ${{ env.CHANGESET_TYPE }}
