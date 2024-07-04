@@ -56,7 +56,8 @@ jobs:
         COMMIT=$(git log -1 --pretty=format:"%s")
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
 
-    - name: Create changeset, version packages, and publish!
+    - name: Create changeset, version packages, and publish
+      if: env.CHANGESET_TYPE != ''
       uses: changesets/action@v1
       with:
         publish: npm run release
@@ -64,6 +65,7 @@ jobs:
         commit: "chore: new release"
         title: "chore: new release candidate"
       env:
+        GITHUB_TOKEN: ${{ secrets.SSH_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     
