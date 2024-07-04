@@ -57,7 +57,7 @@ jobs:
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
 
     - name: Create changeset, version packages, and publish
-      if: env.CHANGESET_TYPE != ''
+      if: ${{ env.TAG_NAME != '' && env.CHANGESET_TYPE != '' }}
       uses: changesets/action@v1
       with:
         publish: npm run release
