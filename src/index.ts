@@ -8,4 +8,5 @@ export * from './components/ui/Input';
 export * from './components/ui/Textarea';
 export * from './components/ui/Checkbox';
 export * from './components/ui/Dropdown';
+export * from './components/ui/PasswordInput';
 export { Toaster, ToastAction, useToast } from './components/ui/Toast';
