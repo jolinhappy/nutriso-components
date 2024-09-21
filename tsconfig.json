@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
     "typeRoots": ["index.d.ts", "node_modules/types"],
     "paths": {
-      "SRC/*": ["./src/*"]
+      "SRC/*": ["./src/*"],
+      "Tailwind-config": ["./tailwind.config.js"]
     },
   },
   "include": ["src"],
