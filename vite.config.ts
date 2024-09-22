@@ -31,7 +31,7 @@ export default defineConfig({
     alias: {
       SRC: fileURLToPath(new URL('./src', import.meta.url)),
       'Tailwind-config': fileURLToPath(
-        new URL('./tailwind.config.js', import.meta.url),
+        new URL('./tailwind.config.ts', import.meta.url),
       ),
     },
   },

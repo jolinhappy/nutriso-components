@@ -22,7 +22,7 @@
     "typeRoots": ["index.d.ts", "node_modules/types"],
     "paths": {
       "SRC/*": ["./src/*"],
-      "Tailwind-config": ["./tailwind.config.js"]
+      "Tailwind-config": ["tailwind.config.ts"]
     },
   },
   "include": ["src"],
