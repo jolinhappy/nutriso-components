@@ -2,4 +2,4 @@
 '@pinkymini/nutriso-components-new': patch
 ---
 
-add passwordInput component
+add components

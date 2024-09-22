@@ -11,4 +11,5 @@ export * from './components/ui/Dropdown';
 export * from './components/ui/PasswordInput';
 export * from './components/ui/PieChart';
 export * from './components/ui/Card';
+export * from './components/ui/Tabs';
 export { Toaster, ToastAction, useToast } from './components/ui/Toast';

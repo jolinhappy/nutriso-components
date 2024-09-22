@@ -1,5 +1,11 @@
 # @pinkymini/nutriso-components-new
 
+## 1.0.13
+
+### Patch Changes
+
+- bfcb216: add passwordInput component
+
 ## 1.0.9
 
 ### Patch Changes
