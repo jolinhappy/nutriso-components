@@ -31,6 +31,9 @@ jobs:
 
     - name: Run tests
       run: npm run test
+    
+    - name: Build project
+      run: npm run build
 
     - name: Extract tag name
       id: extract_tag
@@ -59,16 +62,33 @@ jobs:
         COMMIT=$(git log -1 --pretty=format:"%s")
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
 
-    - name: Create changeset, version packages, and publish
+    # 創建 changeset 並進行版本號更新
+    - name: Version packages
       if: ${{ env.TAG_NAME != '' && env.CHANGESET_TYPE != '' }}
-      uses: changesets/action@v1
-      with:
-        publish: npm run release
-        version: npm version $(echo "${{ env.CHANGESET_TYPE }}")
-        commit: "chore: new release"
-        title: "chore: new release candidate"
+      run: |
+        npx changeset version
+        git add .
+        git commit -m "chore(release): version bump"
+        git push origin main
+
+    # 生成 Changelog 並將所有 commit 記錄插入
+    - name: Append commit history to CHANGELOG
+      if: ${{ env.TAG_NAME != '' && env.CHANGESET_TYPE != '' }}
+      run: |
+        LAST_TAG=$(git describe --tags --abbrev=0)
+        echo -e "\n## Commits since $LAST_TAG:\n" >> CHANGELOG.md
+        git log ${LAST_TAG}..HEAD --pretty=format:"- %h %s (%an)" >> CHANGELOG.md
+        git add CHANGELOG.md
+        git commit -m "chore: update changelog with commit history"
+        git push origin main
+
+    # 發佈到 npm
+    - name: Publish to npm
+      if: ${{ env.TAG_NAME != '' && env.CHANGESET_TYPE != '' }}
+      run: |
+        npm install
+        npx changeset publish
       env:
-        GITHUB_TOKEN: ${{ secrets.SSH_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     
