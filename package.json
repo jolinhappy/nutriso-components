@@ -1,6 +1,6 @@
 {
   "name": "@pinkymini/nutriso-components-new",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "type": "module",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
