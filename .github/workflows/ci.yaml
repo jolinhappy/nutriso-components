@@ -61,6 +61,11 @@ jobs:
       run: |
         COMMIT=$(git log -1 --pretty=format:"%s")
         echo "COMMIT=${COMMIT}" >> $GITHUB_ENV
+  
+    - name: Configure Git user
+      run: |
+        git config --local user.email "jolinhappy1990@hotmal.com"
+        git config --local user.name "Phoebe Hsu"
 
     # 創建 changeset 並進行版本號更新
     - name: Version packages
