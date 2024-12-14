@@ -65,6 +65,12 @@ export default {
         200: '#7FB8F2',
         100: '#CFE4FA',
       },
+      black: {
+        '80%': 'rgba(0, 0, 0, 0.8)',
+        '65%': 'rgba(0, 0, 0, 0.65)',
+        '50%': 'rgba(0, 0, 0, 0.5)',
+        '35%': 'rgba(0, 0, 0, 0.35)',
+      },
     },
     container: {
       center: true,
